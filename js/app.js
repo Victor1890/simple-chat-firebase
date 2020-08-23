@@ -7,7 +7,6 @@ const inputChat = document.querySelector("#inputChat");
 const Authentification = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      console.log(user);
       botones.innerHTML = /*html*/ `
                 <button class="btn btn-outline-danger mr-2" onClick='Cerrar();'>Cerrar</button>
             `;
