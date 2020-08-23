@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyCVH3HED6N4E_lcGbk33b1q1HMVgVppV_E",
+        authDomain: "chat-vainilla.firebaseapp.com",
+        databaseURL: "https://chat-vainilla.firebaseio.com",
+        projectId: "chat-vainilla",
+        storageBucket: "chat-vainilla.appspot.com",
+        messagingSenderId: "103458526514",
+        appId: "1:103458526514:web:eeec9ef9130512ba9e732b",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <title>Chat - Vainilla Js</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand" id="nombreUsuario">Chat</span>
+        <div id="botones">
+          <button class="btn btn-outline-success mr-2">Acceder</button>
+          <button class="btn btn-outline-danger mr-2">Cerrar</button>
+        </div>
+      </nav>
+
+      <main
+        id="contenidoProtegido"
+        class="mt-2 px-2"
+        style="height: 80vh; overflow-y: scroll;"
+      ></main>
+
+      <form id="formulario" class="input-group py-3 fixed-bottom container">
+        <input
+          id="inputChat"
+          type="text"
+          class="form-control"
+          placeholder="Enviar mensaje"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
